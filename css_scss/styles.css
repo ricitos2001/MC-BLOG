@@ -91,8 +91,6 @@ main{
 .minecraft_bioma{
     width:  90%;
     height: auto;
-    padding-left: 20px;
-    padding-right: 10px;
 }
 
 .normal{
@@ -119,21 +117,19 @@ main{
 
 .contenido_normal{
     padding-right: 20px;
-    padding-left: 20px;
     text-align: start;
 }
 
 .contenido_reverso{
     padding-left: 20px;
-    padding-right: 20px;
     text-align: end;
 }
 
 .minecraft_logo{
-    width:  20%;
+    width:  15%;
     height: auto;
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .glow::before, .glow::after{
