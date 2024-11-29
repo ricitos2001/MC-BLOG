@@ -170,7 +170,7 @@ main{
     background: linear-gradient(0deg, black, rgb(44, 44, 44))
 }
 
-#box{
+.box{
     display: flex;
     flex-direction: row;
 }
@@ -187,12 +187,7 @@ main{
     background: linear-gradient(0deg, black, rgb(44, 44, 44))
 }
 
-.minecraft_bioma{
-    width:  90%;
-    height: auto;
-}
-
-.normal{
+.block_3{
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -203,25 +198,37 @@ main{
     background: linear-gradient(0deg, black, rgb(44, 44, 44))
 }
 
-.reversa{
+
+
+.minecraft_bioma{
+    width:  90%;
+    height: auto;
+}
+
+.formulario{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    text-align: center;
     align-items:center;
-    width: 95%;
-    height: 40rem;
     position: relative;
-    margin: 2.5% auto;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    height: auto;
     background: linear-gradient(0deg, black, rgb(44, 44, 44))
 }
 
-.contenido_normal{
+
+
+.contenido{
     padding-right: 20px;
     text-align: start;
 }
 
-.contenido_reverso{
-    padding-left: 20px;
-    text-align: end;
+.minecraft_icon{
+    width: 50%;
+    height: auto;
+    padding: 20px;
 }
 
 .minecraft_logo{
@@ -298,4 +305,21 @@ h3{
 p{
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+    
+.avatar {
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+    
+.avatar img {
+    width:100%;
+    height: 100%; object-fit: cover;
 }
