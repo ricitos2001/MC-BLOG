@@ -173,6 +173,7 @@ main{
 }
 
 .box{
+    text-align: center;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -189,6 +190,7 @@ main{
     margin-right: 1.25%;
     margin-bottom: 1.25%;
     width: 50%;
+    height: auto;
     background: linear-gradient(0deg, black, rgb(44, 44, 44))
 }
 
@@ -239,10 +241,15 @@ main{
     text-align: start;
 }
 
-.minecraft_icon{
+.logo_link{
     width: 50%;
     height: auto;
     padding: 20px;
+}
+
+.minecraft_icon{
+    width: 100%;
+    height: auto;
 }
 
 .minecraft_logo{
@@ -299,7 +306,6 @@ footer{
 a{
     color:white;
     text-decoration: none;
-    margin:10px;
 }
 
 .leyenda{
