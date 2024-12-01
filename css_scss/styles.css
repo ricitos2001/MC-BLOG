@@ -1,18 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
-    margin: 0px;
-    padding: 0px;
-    color:white;
-    background:black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e4e4e4;
+    font-family:sans-serif;
 }
 
 header{
-    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
+    background: #2c2c2c;
+    padding: 0.5rem;
+    border-bottom: 0.3rem solid #00aa00;
+}
+
+h1{
+    font-size: 2rem;
+    color: #e4e4e4;
+}
+
+.mc{
+    font-size: 4rem;
+    color: #2c2c2c;
+}
+
+.mc span{
+    color: #00aa00;
 }
 
 #contenedor{
@@ -23,7 +41,7 @@ header{
 
 #cabecera_logo{
     width: 4rem;
-    margin: 10px;
+    margin: 0.5rem;
 }
 
 nav{
@@ -45,15 +63,15 @@ nav label {
     height: 3rem;
     cursor: pointer;
     display: block;
-    padding: 0.5em;
+    padding: 2.5rem;
 }
 
 #menu-icon, #menu-icon:before, #menu-icon:after {
     background: white;
     border-radius: 0.05em;
     height: 0.2rem;
-    margin-top:10px;
-    margin-bottom: 10px;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
     transition: all 0.2s ease-in-out;
     width: 100%;
 }
@@ -151,25 +169,26 @@ nav ul#redes > li {
 }
 
 main{
-    color:white;
+    color:#e4e4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 165rem;
+    height: 100%;
+    min-height: 45.8rem;
 }
 
-.block{
+.block {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items:center;
-    position: relative;
-    margin-top: 2.5%;
-    margin-bottom: 1.25%;
-    width: 50%;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    width: 75%;
     height: auto;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
+    background: #2c2c2c;
+    border: 0.5rem #00aa00 solid;
+    border-radius: 1rem;
 }
 
 .box{
@@ -185,13 +204,12 @@ main{
     text-align: center;
     align-items:center;
     position: relative;
-    margin-top: 1.25%;
-    margin-left: 1.25%;
-    margin-right: 1.25%;
-    margin-bottom: 1.25%;
+    margin: 1.25%;
     width: 50%;
     height: auto;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
+    background: #2c2c2c;
+    border: 0.5rem #00aa00 solid;
+    border-radius: 1rem;
 }
 
 .block_3{
@@ -203,10 +221,13 @@ main{
     position: relative;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
+    background: #2c2c2c;
+    border: 0.5rem #00aa00 solid;
+    border-radius: 1rem;
 }
 
 .minecraft_bioma{
+    align-content: space-between;
     width:  90%;
     height: auto;
 }
@@ -219,32 +240,17 @@ main{
     position: relative;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    padding: 20px;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
-}
-
-.block_5{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items:center;
-    position: relative;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    width: 25rem;
-    padding: 20px;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
-}
-
-.contenido{
-    padding-right: 20px;
-    text-align: start;
+    width: 29rem;
+    padding: 2rem;
+    background: #2c2c2c;
+    border: 0.5rem #00aa00 solid;
+    border-radius: 1rem;
 }
 
 .logo_link{
     width: 50%;
     height: auto;
-    padding: 20px;
+    padding: 2rem
 }
 
 .minecraft_icon{
@@ -255,37 +261,7 @@ main{
 .minecraft_logo{
     width:  15%;
     height: auto;
-    padding-left: 20px;
-}
-
-.glow::before, .glow::after{
-    content:'';
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff99, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
-    background-size: 400%;
-    width: calc(100% + 5px);
-    height:calc(100% + 5px);
-    z-index: -1;
-    animation: animate-infinite 20s infinite;
-}
-
-@keyframes animate-infinite {
-    0%{
-        background-position: 0 0;
-    }
-    50%{
-        background-position: 400% 0;
-    }
-    100%{
-        background-position: 0 0;
-    }
-}
-
-.glow::after{
-    filter: blur(40px);
-    opacity: 0.99;
+    padding-left: 2rem;
 }
 
 footer{
@@ -293,10 +269,10 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    min-width: 3%;
-    max-width: 100%;
-    height: 4rem;
-    background: linear-gradient(0deg, black, rgb(44, 44, 44))
+    background: #2c2c2c;
+    padding: 0.5rem;
+    color: #e4e4e4;
+    border-top: 0.3rem solid #00aa00;
 }
 
 .copyright{
@@ -304,43 +280,49 @@ footer{
 }
 
 a{
-    color:white;
+    color:#e4e4e4;
     text-decoration: none;
 }
 
-.leyenda{
-    margin: 10px;
-}
-
 h2{
-    padding-left: 20px;
-    padding-right: 20px;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 h3{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: flex-start;
+    text-align: left;
 }
 
 p{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
 }
 
 .perfil {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }
-    
+
 .avatar {
     width: 10rem;
     height: auto;
-    border-radius: 50%;
-    margin-left: 20px;
 }
     
 .avatar img {
     width:100%;
     height: 100%; object-fit: cover;
+}
+
+.formulario{
+    font-weight: bold;
+    display: flex;
+    padding-left: 1rem;
+
 }
