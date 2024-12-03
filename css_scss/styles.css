@@ -9,6 +9,8 @@ body{
     font-family:sans-serif;
 }
 
+/*HEADER*/
+
 header{
     display: flex;
     align-items: center;
@@ -19,27 +21,13 @@ header{
     border-bottom: 0.3rem solid #00aa00;
 }
 
-h1{
-    font-size: 2rem;
-    color: #e4e4e4;
-}
-
-.mc{
-    font-size: 4rem;
-    color: #2c2c2c;
-}
-
-.mc span{
-    color: #00aa00;
-}
-
 #contenedor{
     display: flex;
     align-items: center;
     height: auto;
 }
 
-#cabecera_logo{
+#contenedor__cabecera_logo{
     width: 4rem;
     margin: 0.5rem;
 }
@@ -66,7 +54,7 @@ nav label {
     padding: 2.5rem;
 }
 
-#menu-icon, #menu-icon:before, #menu-icon:after {
+#responsive-menu__menu-icon, #responsive-menu__menu-icon:before, #responsive-menu__menu-icon:after {
     background: white;
     border-radius: 0.05em;
     height: 0.2rem;
@@ -76,46 +64,46 @@ nav label {
     width: 100%;
 }
 
-#menu-icon {
+#responsive-menu__menu-icon {
     display: inline-block;
     max-width: 2em;
     position: relative;
 }
 
-nav label #menu-icon {
+nav label #responsive-menu__menu-icon {
     float: right;
 }
 
-#menu-icon:before, #menu-icon:after {
+#responsive-menu__menu-icon:before, #responsive-menu__menu-icon:after {
     content: '';
     left: 0;
     position: absolute;
 }
 
-#menu-icon:before {
+#responsive-menu__menu-icon:before {
     top: 0.2em;
 }
 
-#menu-icon:after {
+#responsive-menu__menu-icon:after {
     bottom: 0.2em;
 }
 
-nav input[type=checkbox]:checked + label #menu-icon {
+nav input[type=checkbox]:checked + label #responsive-menu__menu-icon {
     background: transparent;
 }
 
-nav input[type=checkbox]:checked + label #menu-icon:before {
+nav input[type=checkbox]:checked + label #responsive-menu__menu-icon:before {
     top: -10px;
     transform: rotate(45deg);
 }
 
-nav input[type=checkbox]:checked + label #menu-icon:after {
+nav input[type=checkbox]:checked + label #responsive-menu__menu-icon:after {
     top: -10px;
     transform: rotate(-45deg);
 }
 
-nav input:checked ~ #overlay {
-    background: linear-gradient(0deg, black, rgb(44, 44, 44));
+nav input:checked ~ #inicio__overlay {
+    background: #2c2c2c;
     bottom: 0;
     left: 0;
     height: 100vh;
@@ -148,7 +136,7 @@ nav ul > li {
 }
 
 nav ul a {
-    color: white;
+    color: #e4e4e4;
     text-decoration: none;
 }
 
@@ -156,17 +144,19 @@ nav ul a:hover {
     text-decoration: underline;
 }
 
-nav ul#redes > li {
+nav ul#inicio__redes > li {
     display: inline-block;
     font-size: 1.5em;
     margin: 0.5em;
 }
 
-.logo_redes{
+.redes__logo_redes{
     width: 2rem;
     height: 2rem;
     margin: 10px;
 }
+
+/*MAIN*/
 
 main{
     color:#e4e4e4;
@@ -175,50 +165,79 @@ main{
     align-items: center;
     width: 100%;
     height: 100%;
-    min-height: 45.8rem;
+    min-height: 45.67rem;
 }
+
+.mc{
+    font-size: 4rem;
+    color: #2c2c2c;
+}
+
+.mc span{
+    color: #00aa00;
+}
+
 
 .block {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 2.5rem;
     margin-bottom: 1.25rem;
     width: 75%;
-    height: auto;
     background: #2c2c2c;
     border: 0.5rem #00aa00 solid;
     border-radius: 1rem;
 }
 
+.block__minecraft_bioma{
+    width:  90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .box{
-    text-align: center;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.block_2{
+.box__block-2{
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items:center;
-    position: relative;
+    justify-content: space-around;
     margin: 1.25%;
     width: 50%;
-    height: auto;
     background: #2c2c2c;
     border: 0.5rem #00aa00 solid;
     border-radius: 1rem;
 }
 
-.block_3{
+.block-2__logo_link{
+    width: 50%;
+    height: auto;
+    padding: 2rem
+}
+
+#block-2__logo_link{
+    width: 92.75%;
+    padding: 2rem;
+}
+
+.block-2__minecraft_icon{
+    width: 100%;
+}
+
+.block-2__mc2{
+    text-align: center;
+}
+
+.block-3{
     display: flex;
     flex-direction: row;
     align-items:center;
     width: 95%;
     height: 40rem;
-    position: relative;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
     background: #2c2c2c;
@@ -226,13 +245,12 @@ main{
     border-radius: 1rem;
 }
 
-.minecraft_bioma{
-    align-content: space-between;
-    width:  90%;
-    height: auto;
+.block-3__minecraft_logo{
+    width:  15%;
+    padding-left: 2rem;
 }
 
-.block_4{
+.block-4{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -247,22 +265,28 @@ main{
     border-radius: 1rem;
 }
 
-.logo_link{
-    width: 50%;
-    height: auto;
-    padding: 2rem
+.block-4__perfil {
+    display: flex;
+    align-items: center;
 }
 
-.minecraft_icon{
-    width: 100%;
+.perfil__avatar {
+    width: 10rem;
     height: auto;
 }
 
-.minecraft_logo{
-    width:  15%;
-    height: auto;
-    padding-left: 2rem;
+.perfil__avatar img {
+    width:100%;
+    height: 100%; object-fit: cover;
 }
+
+.perfil__formulario{
+    font-weight: bold;
+    display: flex;
+    padding-left: 1rem;
+
+}
+/*FOOTER*/
 
 footer{
     display: flex;
@@ -279,14 +303,15 @@ footer{
     width: 1.5%;
 }
 
-a{
-    color:#e4e4e4;
-    text-decoration: none;
+/*OTRAS PROPIEDADES*/
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #e4e4e4;
 }
 
 h2{
-    align-items: flex-start;
-    text-align: left;
     font-size: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -299,30 +324,20 @@ h3{
     text-align: left;
 }
 
+a{
+    text-align: center;
+    color:#e4e4e4;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
 p{
     padding-left: 1rem;
     padding-right: 1rem;
     font-weight: bold;
 }
 
-.perfil {
-    display: flex;
-    align-items: center;
-}
-
-.avatar {
-    width: 10rem;
-    height: auto;
-}
-    
-.avatar img {
-    width:100%;
-    height: 100%; object-fit: cover;
-}
-
-.formulario{
-    font-weight: bold;
-    display: flex;
-    padding-left: 1rem;
-
+textarea{
+    width: 100%;
+    height: 10rem;
 }
